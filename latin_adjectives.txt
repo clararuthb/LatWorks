@@ -1,0 +1,16 @@
+acer,acris,acre	bitter,harsh,severe
+bonus,bona,bonum	good
+brevis,brevis,breve	short in duration,brief
+celer,celeris,celere	swift,rapid,fast
+difficilis,difficilis,difficile	hard,difficult,troublesome
+dulcis,dulcis,dulce	sweet,agreeable,pleasant
+facilis,facilis,facile	easy,pleasant,agreeable
+fortis,fortis,forte	strong,brave
+ingens,ingens,ingens	huge,big
+iucundus,iucunda,iucundum	pleasant,delightful,agreeable
+longus,longa,longum	long
+omnis,omnis,omne	all,every
+potens,potens,potens	strong,powerful,able
+senex,senex,senex	old,old man
+fuscus,fusca,fuscum	dark,black
+pulchrus,pulchra,pulchrum	beautiful
