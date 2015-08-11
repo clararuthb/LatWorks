@@ -9,11 +9,6 @@ python_input.close()
 
 eachadj = adjlist.split("\n")
 
-""""masclist = []
-femlist = []
-neutlist = []
-englishlist = []"""
-
 mascdict = {}
 femdict = {}
 neutdict = {}
@@ -45,7 +40,7 @@ for adjdef in eachadj:
 	print key + ", " +femdict[key][0] + ", " + femdict[key][1] + ", " + str(femdict[key][2])"""
 
 genderchoice=raw_input("Which gender would you like to be the given form?   ")
-if genderchoice=="masculine":
+if genderchoice=="masculine"or "Masculine":
 	print "\n okay then. let's begin."
 	masckeys = mascdict.keys()
 	random.shuffle(masckeys)
@@ -102,6 +97,115 @@ if genderchoice=="masculine":
 				print ", ".join(mascdict[mascadj][2])
 			
 			
-			#", ".join(list)
-			
-			
+if genderchoice == "feminine" or "Feminine":
+	print "\n okay then. let's begin."
+	femkeys = femdict.keys()
+	random.shuffle(femkeys)
+
+	for femadj in femkeys:
+		x = 0
+		print "\n" + femadj
+		guess = "empty string: I have to call it something"
+		while guess != femdict[femadj][0] and x < 3:
+			guess = raw_input("masculine? \n")
+			if guess == femdict[femadj][0]:
+				print "te laudo \n"
+			elif x<2:
+				print "probably a typo. I believe in you."
+				x = x + 1
+				print "\n" + (str(x+1))
+			else:
+				x=x+1 
+				print "\n This is the right answer:"
+				print femdict[femadj][0]
+				print " "
+		x=0
+		guess = "whatever"
+		while guess != femdict[femadj][1] and x<3:
+			guess = raw_input(" neuter? \n")
+			if guess == femdict[femadj][1]:
+				print "te laudo \n"
+			elif x<2:
+				print "probably a typo. I believe in you."
+				x=x+1
+				print "\n" +(str(x+1)) 
+			else:
+				x=x+1
+				print "\n This is the right answer:"
+				print femdict[femadj][1] + "\n"
+		x=0
+		while x<3:
+			guess = raw_input("English translation? \n")
+			if guess in femdict[femadj][2]:
+				print "te laudo \n"
+				if len(femdict[femadj][2])>1:
+					print "These translations would also work:"
+					templist = femdict[femadj][2]
+					templist.remove(guess)
+					print ", ".join(templist)
+				break
+			elif x<2:
+				print "hmm try again"
+				x=x+1
+				print "\n" + str(x+1)
+			else:
+				x=x+1
+				print "\n These are acceptable translations:"
+				print ", ".join(femdict[femadj][2])
+				
+if genderchoice == "neuter" or "Neuter":
+	print "\n okay then. let's begin."
+	neutkeys = neutdict.keys()
+	random.shuffle(neutkeys)
+
+	for neutadj in neutkeys:
+		x = 0
+		print "\n" + neutadj
+		guess = "empty string: I have to call it something"
+		while guess != neutdict[neutadj][0] and x < 3:
+			guess = raw_input("masculine? \n")
+			if guess == neutdict[neutadj][0]:
+				print "te laudo \n"
+			elif x<2:
+				print "probably a typo. I believe in you."
+				x = x + 1
+				print "\n" + (str(x+1))
+			else:
+				x=x+1 
+				print "\n This is the right answer:"
+				print neutdict[neutadj][0]
+				print " "
+		x=0
+		guess = "whatever"
+		while guess != neutdict[neutadj][1] and x<3:
+			guess = raw_input(" feminine? \n")
+			if guess == neutdict[neutadj][1]:
+				print "te laudo \n"
+			elif x<2:
+				print "probably a typo. I believe in you."
+				x=x+1
+				print "\n" +(str(x+1)) 
+			else:
+				x=x+1
+				print "\n This is the right answer:"
+				print neutdict[neutadj][1] + "\n"
+		x=0
+		while x<3:
+			guess = raw_input("English translation? \n")
+			if guess in neutdict[neutadj][2]:
+				print "te laudo \n"
+				if len(neutdict[neutadj][2])>1:
+					print "These translations would also work:"
+					templist = neutdict[neutadj][2]
+					templist.remove(guess)
+					print ", ".join(templist)
+				break
+			elif x<2:
+				print "hmm try again"
+				x=x+1
+				print "\n" + str(x+1)
+			else:
+				x=x+1
+				print "\n These are acceptable translations:"
+				print ", ".join(neutdict[neutadj][2])
+		
